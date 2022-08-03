@@ -14,7 +14,7 @@ public class EmployeeWageComputation {
         int empWage = 0;
         int empCheck = (int) (Math.floor(Math.random() * 10) % 3);
 
-        if (empCheck == FULL_TIME) {
+      /*  if (empCheck == FULL_TIME) {
             workingHours = 8;
             System.out.println("Employee is Present");
         }
@@ -24,7 +24,22 @@ public class EmployeeWageComputation {
         }
         else {
             System.out.println("Employee is Absent");
+        } */
+
+        switch(empCheck) {
+            case FULL_TIME:
+                workingHours = 8;
+                System.out.println("Employee is Present");
+                break;
+            case PART_TIME:
+                workingHours = 4;
+                System.out.println("Employee is Present");
+                break;
+            default:
+                workingHours = 0;
+                System.out.println("Employee is Absent");
         }
+
          empWage = workingHours * WAGE_PER_HOUR;
         System.out.println("Employee Wage = " + empWage);
     }
